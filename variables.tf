@@ -22,12 +22,12 @@ variable "sec_region" {
 variable "Private_subnet_ids_p" {
   type        = list(string)
   description = "A list of private subnet IDs in your Primary AWS region VPC"
-  default     = ["subnet-02c8075bf371855b0", "subnet-0dc3a8aee59756816", "subnet-0da64c045bd6d2877"]
+  default     = ["subnet-02c8075bf3718fake", "subnet-02c8075bf3718fake", "subnet-02c8075bf3718fake"]
 }
 variable "Private_subnet_ids_s" {
   type        = list(string)
   description = "A list of private subnet IDs in your Secondary AWS region VPC"
-  default     = ["subnet-03cf8c70b128bf4d7", "subnet-09231285ff07a5f71", "subnet-0586806e2ce2fd7a9"]
+  default     = ["subnet-02c8075bf3718fake", "subnet-02c8075bf3718fake", "subnet-02c8075bf3718fake"]
 }
 variable "engine" {
   description = "Aurora database engine type: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora)"
@@ -90,23 +90,23 @@ variable "instance_class" {
 variable "cluster_security_groups_p" {
   description = "Security Groups for DB instances."
   type        = list(string)
-  default     = ["sg-094f5b633ec9e7cd2"]
+  default     = ["sg-094f5b633ec9efake"]
 }
 variable "cluster_security_groups_s" {
   description = "Security Groups for DB instances."
   type        = list(string)
-  default     = ["sg-0443e8e4b6b33480a"]
+  default     = ["sg-0443e8e4b6b33fake"]
 }
 variable "kms_key_p" {
   description = "kmsKeyId should be explicitly specified for primary | optional"
   type        = string
-  default     = "arn:aws:kms:eu-west-1:411929112137:key/41f6c450-6520-454b-8acc-96374f264eae"
+  default     = "arn:aws:kms:eu-west-1:123456789123:key/41f6c450-6520-454b-8acc-f9deba04fake"
   #default     = "alias/aws/rds"
 }
 variable "kms_key_s" {
   description = "kmsKeyId should be explicitly specified for secondary | MUST exist"
   type        = string
-  default     = "arn:aws:kms:eu-central-1:411929112137:key/aa0b3903-b422-432c-83d9-f9deba048d14"
+  default     = "arn:aws:kms:eu-central-1:123456789123:key/aa0b3903-b422-432c-83d9-f9deba04fake"
   #default     = "alias/aws/rds"
 }
 variable "enable_logs" {
